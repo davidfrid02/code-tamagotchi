@@ -70,55 +70,26 @@ If health drops to 0, your pet dies. You'll get a notification with a "Show Pet"
 
 | Stage | Emoji | XP Threshold |
 |-------|-------|-------------|
-| Egg | :egg: | 0 |
-| Baby | :hatching_chick: | 50 |
-| Child | :baby_chick: | 200 |
-| Teen | :dragon: | 500 |
-| Adult | :dragon_face: | 1,200 |
-| Elder | :eagle: | 3,000 |
-| Legendary | :star2: | 7,000 |
+| Egg | 🥚 | 0 |
+| Baby | 🐣 | 50 |
+| Child | 🐥 | 200 |
+| Teen | 🐉 | 500 |
+| Adult | 🐲 | 1,200 |
+| Elder | 🦅 | 3,000 |
+| Legendary | 🌟 | 7,000 |
 
 ## Getting Started
 
-### Prerequisites
+1. Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=davidfried007.code-tamagotchi)
+2. Your pet appears in the status bar as an 🥚
+3. Click the status bar item or run `Code Tamagotchi: Show Pet` from the command palette
 
-- Node.js (v20+)
-- VS Code (v1.85+)
-
-### Development Setup
-
-```bash
-# Install dependencies
-npm install
-
-# Build the extension
-npm run build
-
-# Or watch for changes during development
-npm run watch
-```
-
-### Running the Extension
-
-1. Open the project in VS Code
-2. Press **F5** to launch the Extension Development Host
-3. The pet emoji appears in the status bar
-4. Click the status bar item or run `Code Tamagotchi: Show Pet` from the command palette
-
-### Available Commands
+### Commands
 
 | Command | Description |
 |---------|-------------|
 | `Code Tamagotchi: Show Pet` | Open the pet panel |
 | `Code Tamagotchi: Reset Pet` | Reset pet to default state (with confirmation) |
-
-## Running Tests
-
-```bash
-npm test
-```
-
-Tests use Jest with ts-jest and a manual vscode module mock.
 
 ## Configuration
 
@@ -126,33 +97,12 @@ These settings are available in VS Code Settings under "Code Tamagotchi":
 
 | Setting | Default | Description |
 |---------|---------|-------------|
+| `codeTamagotchi.petName` | Byte | Default name for your pet |
 | `codeTamagotchi.hungerRate` | 12.5 | Hunger increase per hour |
 | `codeTamagotchi.commitFeedAmount` | 30 | Hunger reduction per commit |
 | `codeTamagotchi.xpPerLine` | 2 | XP gained per deleted line |
 | `codeTamagotchi.errorThreshold` | 20 | Error count before health decreases |
 
-## Project Structure
+## Contributing
 
-```
-code-tamagotchi/
-  src/
-    types.ts                    # Shared types, enums, and interfaces
-    extension.ts                # Extension entry point (activate/deactivate)
-    pet/
-      EvolutionStages.ts        # Stage definitions, XP thresholds, emoji mapping
-      PetState.ts               # State management with EventEmitter and globalState persistence
-      PetEngine.ts              # Game loop: hunger decay, XP, health, evolution
-    trackers/
-      CommitTracker.ts          # Polls vscode.git API for HEAD changes every 10s
-      LineDeletionTracker.ts    # Tracks net line deletions with 2s debounce
-      DiagnosticsTracker.ts     # Monitors linter errors with 3s debounce
-    ui/
-      StatusBarManager.ts       # Status bar item with mood indicators
-      PetPanelProvider.ts       # Webview panel with HTML/CSS/JS UI
-    __mocks__/
-      vscode.ts                 # Manual mock of the vscode module for tests
-  esbuild.js                    # Build configuration (bundles to dist/extension.js)
-  jest.config.js                # Jest configuration with ts-jest preset
-  tsconfig.json                 # TypeScript configuration
-  package.json                  # Extension manifest and scripts
-```
+See the [GitHub repository](https://github.com/davidfrid02/code-tamagotchi) for development setup and contribution guidelines.
