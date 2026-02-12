@@ -7,7 +7,7 @@ const STATE_KEY = 'codeTamagotchi.petState';
 function createDefaultState(): PetStateData {
   const now = Date.now();
   return {
-    name: 'Tama',
+    name: 'Byte',
     stage: EvolutionStage.Egg,
     xp: 0,
     hunger: 0,
