@@ -2,9 +2,14 @@
 
 A VS Code extension that places a digital pet in your status bar. Feed it with git commits, earn XP by deleting unnecessary lines of code, and keep it healthy by fixing linter errors. Watch your pet evolve through seven stages as you write better code.
 
+![Pet Panel](https://raw.githubusercontent.com/davidfrid02/code-tamagotchi/main/images/screenshot-panel.png)
+
 ## Features
 
 - **Status bar pet** -- your pet lives in the VS Code status bar with a mood indicator
+
+  ![Status Bar](https://raw.githubusercontent.com/davidfrid02/code-tamagotchi/main/images/screenshot-status.png)
+
 - **Webview panel** -- click the status bar to open a detailed view with stats, progress bars, and actions
 - **Evolution system** -- seven stages from Egg to Legendary, driven by XP
 - **Mood system** -- pet mood reflects hunger, health, and overall care
