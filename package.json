@@ -2,7 +2,7 @@
     "name": "code-tamagotchi",
     "displayName": "Code Tamagotchi",
     "description": "A digital pet that lives in your status bar. Feed it with commits, evolve it by refactoring, and keep it healthy by fixing linter errors.",
-    "version": "0.1.0",
+    "version": "0.73.16",
     "publisher": "davidfried007",
     "engines": {
         "vscode": "^1.85.0"
